@@ -1,17 +1,16 @@
-import { Link, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 export default function Home() {
     
-    const router = useRouter();
 
     return(
-        <KeyboardAvoidingView
-      style={styles.container}
-      behavior="padding">
-      
-    </KeyboardAvoidingView>
+      <KeyboardAvoidingView
+        style={styles.container}
+        behavior="padding">
+          
+      </KeyboardAvoidingView>
     )
 }
 
@@ -22,7 +21,7 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: 'red'
+      backgroundColor: 'black'
     },
     inputContainer: {
       width: '80%',
