@@ -1,6 +1,7 @@
 import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react'
-import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Button, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { withTheme } from 'styled-components';
 
 export default function Home() {
     
@@ -9,7 +10,21 @@ export default function Home() {
       <KeyboardAvoidingView
         style={styles.container}
         behavior="padding">
-          
+          <Text style={styles.Title}>Cloud Destinations Login</Text>
+          <View>
+            <TouchableOpacity
+            style = {styles.buttonContainer}>
+              <Text style= {styles.buttons}> Login with Facial Rec</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+            style = {styles.buttonContainer}>
+              <Text style= {styles.buttons}> Login with QR</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+            style = {styles.buttonContainer}>
+              <Text style= {styles.buttons}> Login with Admin approval</Text>
+            </TouchableOpacity>
+          </View>
       </KeyboardAvoidingView>
     )
 }
@@ -23,56 +38,27 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       backgroundColor: 'black'
     },
-    inputContainer: {
-      width: '80%',
+    Title: {
+      fontSize: 30,
+      color: "white",
+      borderColor: "red",
+      borderWidth: 1,
+      fontFamily: "Georgia",
+
     },
-    input: {
-      backgroundColor: 'white',
-      paddingHorizontal: 15,
-      paddingVertical: 10,
-      borderRadius: 10,
-      marginTop: 5, 
+    buttons: {
+        color: "white",
+        fontSize: 20,
+        fontFamily: "Georgia",
+        alignSelf: 'center'
     },
     buttonContainer: {
-      width: '80%',
+      height: 50,
+      width: 200,
+      backgroundColor: "blue",
+      alignContent: "center",
       justifyContent: 'center',
-      alignItems: 'center',
-      marginTop: 5,
-    },
-    button: {
-      backgroundColor: '#0782F9',
-      width: '100%',
-      padding: 15,
-      borderRadius: 10,
-      alignItems: 'center',
-      marginBottom: 10
-    },
-    buttonOutline: {
-      backgroundColor: 'white',
-      marginTop: 5,
-      borderColor: '#0782F9',
-      borderWidth: 2,
-    },
-    buttonText: {
-      color: 'white',
-      fontWeight: '700',
-      fontSize: 16,
-    },
-    link: {
-      color: 'blue',
-      fontWeight: '700',
-      fontSize: 16,
-      textDecorationLine: "underline",
-    },
-    buttonOutlineText: {
-      color: '#0782F9',
-      fontWeight: '700',
-      fontSize: 16,
-    },
-    titleText: {
-      color: 'black',
-      fontWeight: '700',
-      fontSize: 32,
-      marginBottom: 5
+      marginTop: 50,
+      borderRadius: 15
     }
   })
