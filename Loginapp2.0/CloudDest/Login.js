@@ -1,11 +1,14 @@
-import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react'
 import { Button, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Router } from 'react-router-dom';
 import { withTheme } from 'styled-components';
 
-export default function Home() {
-    
 
+export default function Home({navigation}) {
+    
+    const faceRec = () => {
+      navigation.navigate("Camera")
+    }
     return(
       <KeyboardAvoidingView
         style={styles.container}
@@ -13,6 +16,7 @@ export default function Home() {
           <Text style={styles.Title}>Cloud Destinations Login</Text>
           <View>
             <TouchableOpacity
+            onPress={() => {faceRec()}}
             style = {styles.buttonContainer}>
               <Text style= {styles.buttons}> Login with Facial Rec</Text>
             </TouchableOpacity>
@@ -36,13 +40,12 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: 'black'
+      backgroundColor: 'beige'
     },
     Title: {
       fontSize: 30,
-      color: "white",
-      borderColor: "red",
-      borderWidth: 1,
+      color: "blue",
+      backgroundColor: "#D3D3D3",
       fontFamily: "Georgia",
 
     },
@@ -50,7 +53,8 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 20,
         fontFamily: "Georgia",
-        alignSelf: 'center'
+        alignSelf: 'center',
+        alignContent: 'center'
     },
     buttonContainer: {
       height: 50,
