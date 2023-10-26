@@ -7,3 +7,12 @@ Node js
 
 Languages coded in:
 Java Script
+
+Running the code:
+nmp install
+npm start
+scan the Qr code with your phone and make sure Expo go is downloaded
+
+Shortcommings:
+Tried using multiple face req files and none would work well with upscaling
+Now I have the code for the app just the facial req is not good.
