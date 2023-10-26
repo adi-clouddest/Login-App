@@ -15,4 +15,4 @@ scan the Qr code with your phone and make sure Expo go is downloaded
 
 Shortcommings:
 Tried using multiple face req files and none would work well with upscaling
-Now I have the code for the app just the facial req is not good.
+Now I have the code for the app just the facial req is not good becasue each API i used would not scale correctly and ultimately I had to quit because of school.
