@@ -13,6 +13,14 @@ nmp install
 npm start
 scan the Qr code with your phone and make sure Expo go is downloaded
 
+Current status: 
+App will connect with the users phone and can take photos that will save on users device.
+
 Shortcommings:
 Tried using multiple face req files and none would work well with upscaling
 Now I have the code for the app just the facial req is not good becasue each API i used would not scale correctly and ultimately I had to quit because of school.
+
+Face-api : Needs the pictures to be all online which wont work with a database
+Face-recognition.js : Will only work if predetermined amount of files and is old and outdated/ wouldnt work on my system
+
+
